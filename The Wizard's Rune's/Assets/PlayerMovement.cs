@@ -1,19 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speedofMove = 0f;
-    [SerializeField] float speedofRunFast = 0f;
+    [SerializeField] float speedOfMove = 2f;
+    [SerializeField] float speedOfRunFast = 2.5f;
     private Camera mainCamera;
+    private CharacterController ccplayer;
     private Vector3 pointToLookAt;
     private float rayLenght;
     [SerializeField] private Animator playerAnimator;
+    private float gravity = -9.81f;
+    private float height = 5f;
+
+    private Vector3 speed;
     // Start is called before the first frame update
     void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
+        ccplayer = GetComponent<CharacterController>();
 
     }
 
@@ -22,36 +29,39 @@ public class PlayerMovement : MonoBehaviour
     {
         Inputs();
         PlayerLookAtMousePos();
+        Gravedad();
     }
+    void Gravedad()
+    {
+        speed.y += gravity * Time.deltaTime;
+        ccplayer.Move(speed * Time.deltaTime);
+        Debug.Log(ccplayer.isGrounded);
+        playerAnimator.SetBool("isJump", !ccplayer.isGrounded);
+    }
+
     void Inputs()
     {
-
+        //MOVERSE HACIA ADELANTE Y CORRER!
         if (Input.GetKey(KeyCode.W))
         {
-
             Move(Vector3.forward);
             playerAnimator.SetBool("isRun", true);
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                Move(Vector3.forward * speedofRunFast);
-
+                Move(Vector3.forward * speedOfRunFast);
                 playerAnimator.SetBool("isRunFast", true);
             }
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-
                 playerAnimator.SetBool("isRunFast", false);
             }
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
-
             playerAnimator.SetBool("isRun", false);
-
-
         }
-
+        //MOVERSE HACIA ATRAS!
         if (Input.GetKey(KeyCode.S))
         {
 
@@ -63,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
             playerAnimator.SetBool("isRunBack", false);
         }
+        //MOVERSE HACIA LA IZQ!
         if (Input.GetKey(KeyCode.A))
         {
 
@@ -74,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
             playerAnimator.SetBool("isRunLeft", false);
         }
+        //MOVERSE HACIA LA DERECHA!
         if (Input.GetKey(KeyCode.D))
         {
 
@@ -85,11 +97,19 @@ public class PlayerMovement : MonoBehaviour
 
             playerAnimator.SetBool("isRunRight", false);
         }
+        //SALTAR
+        if (Input.GetKey(KeyCode.Space) && ccplayer.isGrounded)
+        {
+
+            speed.y = Mathf.Sqrt(-height * gravity);
+
+
+        }
     }
     void Move(Vector3 direction)
     {
 
-        transform.Translate(direction * speedofMove * Time.deltaTime);
+        ccplayer.Move(transform.TransformDirection(direction) * speedOfMove * Time.deltaTime);
     }
     void PlayerLookAtMousePos()
     {

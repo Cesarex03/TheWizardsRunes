@@ -182,8 +182,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33808516}
-  m_LocalRotation: {x: 0.25898546, y: -0.6529792, z: 0.25442216, w: 0.66469103}
-  m_LocalPosition: {x: 24.270826, y: 17.252092, z: -2.5855823}
+  m_LocalRotation: {x: 0.17168477, y: -0.7532837, z: 0.21671586, w: 0.5967599}
+  m_LocalPosition: {x: 26.800827, y: 16.232092, z: 0.28441775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1362024676}
@@ -413,7 +413,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.18, z: 0}
 --- !u!4 &712035597
 Transform:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712035592}
   m_LocalRotation: {x: -0, y: -0.7082542, z: -0, w: 0.7059575}
-  m_LocalPosition: {x: 20.37, y: 1.29, z: -1.18}
+  m_LocalPosition: {x: 20.37, y: 1.11, z: -1.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1296961594}
@@ -442,8 +442,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4fbb5e414ba3714fa389a83ae94e22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedofMove: 2
-  speedofRunFast: 5
+  speedOfMove: 2
+  speedOfRunFast: 2.5
   playerAnimator: {fileID: 1426780073}
 --- !u!1 &963194225
 GameObject:
@@ -522,8 +522,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.25898546, y: -0.6529792, z: 0.25442216, w: 0.66469103}
-  m_LocalPosition: {x: 24.270826, y: 17.252092, z: -2.5855823}
+  m_LocalRotation: {x: 0.17168477, y: -0.7532837, z: 0.21671586, w: 0.5967599}
+  m_LocalPosition: {x: 26.800827, y: 16.232092, z: 0.28441775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161538351}
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 9, y: 8.27, z: -0.16}
+  m_FollowOffset: {x: 11.53, y: 7.43, z: 2.71}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -912,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4063552230360950, guid: dbf7a0c9d76b77a40af3104feac0641d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.09
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 4063552230360950, guid: dbf7a0c9d76b77a40af3104feac0641d, type: 3}
       propertyPath: m_LocalPosition.z
