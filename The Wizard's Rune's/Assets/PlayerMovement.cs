@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator playerAnimator;
     private float gravity = -9.81f;
     private float height = 5f;
+    private bool isGrounded = true;
 
     private Vector3 speed;
     // Start is called before the first frame update
@@ -30,12 +31,13 @@ public class PlayerMovement : MonoBehaviour
         Inputs();
         PlayerLookAtMousePos();
         Gravedad();
+        Debug.Log(isGrounded);
     }
     void Gravedad()
     {
         speed.y += gravity * Time.deltaTime;
         ccplayer.Move(speed * Time.deltaTime);
-        Debug.Log(ccplayer.isGrounded);
+        //Debug.Log(ccplayer.isGrounded);
         playerAnimator.SetBool("isJump", !ccplayer.isGrounded);
     }
 
@@ -98,10 +100,11 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetBool("isRunRight", false);
         }
         //SALTAR
-        if (Input.GetKey(KeyCode.Space) && ccplayer.isGrounded)
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
 
             speed.y = Mathf.Sqrt(-height * gravity);
+            playerAnimator.SetTrigger("Jump");
 
 
         }
@@ -126,6 +129,27 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+    void OnTriggerEnter(Collider other)
+    {
 
+        if (other.gameObject.layer == 31)
+        {
+
+            isGrounded = true;
+        }
+
+
+    }
+    void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.layer == 31)
+        {
+
+            isGrounded = false;
+        }
+
+
+    }
 
 }
