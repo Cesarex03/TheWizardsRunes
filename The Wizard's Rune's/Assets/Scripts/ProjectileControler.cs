@@ -8,13 +8,9 @@ public class ProjectileControler : MonoBehaviour
     [SerializeField] Transform shootTransform;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] bool canShoot = true;
-    //[SerializeField] bool shootwithAnim = false;
     [SerializeField] float timpePass = 1f;
-    [SerializeField] float ShootTimeDelay = 0f;
-
     [SerializeField] float cooldownBetweenProjectiles = 2f;
     private GameObject projectilesParent;
-   // [SerializeField] float delayofAtackAnim = 1f;
     // Start is called before the first frame update
     void Start()
     {
