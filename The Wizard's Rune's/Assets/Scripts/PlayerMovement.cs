@@ -31,13 +31,12 @@ public class PlayerMovement : MonoBehaviour
         Inputs();
         PlayerLookAtMousePos();
         Gravedad();
-        Debug.Log(isGrounded);
+        
     }
     void Gravedad()
     {
         speed.y += gravity * Time.deltaTime;
         ccplayer.Move(speed * Time.deltaTime);
-        //Debug.Log(ccplayer.isGrounded);
         playerAnimator.SetBool("isJump", !ccplayer.isGrounded);
     }
 

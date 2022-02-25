@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class TotemsTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject FireMobile;
+    [SerializeField] private GameObject fireMobile;
+
+    public bool fireOn = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-     void OnTriggerEnter(Collider other) {
-        
-        if(other.gameObject.CompareTag("FireMobile")){
 
-        FireMobile.SetActive(true);
-        FireMobile.SetActive(true);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("FireBall"))
+        {
+            fireMobile.SetActive(true);
+            Destroy(other.gameObject);
+            fireOn = true;
         }
     }
 }
