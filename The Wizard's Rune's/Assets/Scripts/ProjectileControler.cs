@@ -11,10 +11,11 @@ public class ProjectileControler : MonoBehaviour
     [SerializeField] float timpePass = 1f;
     [SerializeField] float cooldownBetweenProjectiles = 2f;
     private GameObject projectilesParent;
+
     // Start is called before the first frame update
     void Start()
     {
-projectilesParent = GameObject.Find("--PROJECTILESCACHE--");
+        projectilesParent = GameObject.Find("--PROJECTILESCACHE--");
     }
 
     // Update is called once per frame
@@ -44,7 +45,7 @@ projectilesParent = GameObject.Find("--PROJECTILESCACHE--");
         {
 
             playerAnimator.SetBool("isShoot", false);
-            
+
         }
     }
     void TimerBetweenProjectiles()
@@ -60,4 +61,5 @@ projectilesParent = GameObject.Find("--PROJECTILESCACHE--");
         }
 
     }
+    
 }
