@@ -26,6 +26,7 @@ public class GateAnimTrigger : MonoBehaviour
         if (gateParentScript.canTriggerOtherAnim)
         {
             moveAnim.SetBool("isStop", true);
+            
 
         }
 

@@ -7,9 +7,7 @@ public class DoorManager : MonoBehaviour
     [SerializeField] TotemsTrigger antorcha1;
     [SerializeField] TotemsTrigger antorcha2;
     [SerializeField] Animator rockGateAnimVibration;
-
     [SerializeField] GameObject gateVSF;
-
     public bool canTriggerOtherAnim = false;
     public bool isClosed = false;
     public bool isClosedSound = false;
@@ -31,7 +29,7 @@ public class DoorManager : MonoBehaviour
             rockGateClosedSound.Play();
             isClosedSound = false;
         }
-    
+
     }
     void RockGateAnimations()
     {
@@ -52,8 +50,9 @@ public class DoorManager : MonoBehaviour
         {
             rockGateAnimVibration.enabled = false;
             gateVSF.SetActive(false);
-            
+
         }
-        
+
+
     }
 }
