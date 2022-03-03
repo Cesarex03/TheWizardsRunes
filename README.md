@@ -1,1 +1,3 @@
 # The_Wizards_Runes
+
+Emprende una aventura Magica y Fantasiosa, en busqueda de las runas elementales de los magos. Pues estas, Han sido robadas por sus enemigos historicos, los Warlings.              Una raza de  mounstros despiadados de todo tipo, que siempre, han tenido el objetivo de acabar y apoderarse con el mundo Magico de Runistralia. Las Runas magicas, en             manos de los Warlings, serian malversadas en un intento de ultrajar el poder elemental que llevan dentro, poder, que es utilizado original y unicamente, para desarrollar y         pcanalizar los poderes elementales de los Magos. 
