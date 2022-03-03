@@ -23,4 +23,14 @@ public class ProjectileMovement : MonoBehaviour
 
         transform.Translate(projectileSpeed * Time.deltaTime * Vector3.forward);
     }
+    private void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject)
+        {
+            //Destroy(gameObject);
+            Debug.Log("Colision");
+        }
+
+    }
 }
