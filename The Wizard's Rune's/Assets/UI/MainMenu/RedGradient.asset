@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedGradient
   m_EditorClassIdentifier: 
   colorMode: 3
-  topLeft: {r: 0.7921569, g: 0.1882353, b: 0.29803923, a: 1}
-  topRight: {r: 0.7921569, g: 0.1882353, b: 0.29803923, a: 1}
-  bottomLeft: {r: 1, g: 0, b: 0.1254902, a: 1}
-  bottomRight: {r: 1, g: 0, b: 0.1254902, a: 1}
+  topLeft: {r: 1, g: 0, b: 0.21075773, a: 1}
+  topRight: {r: 1, g: 0, b: 0.21176472, a: 1}
+  bottomLeft: {r: 1, g: 0, b: 0.21176472, a: 1}
+  bottomRight: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
