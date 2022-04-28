@@ -1596,6 +1596,7 @@ GameObject:
   - component: {fileID: 7320928298693597680}
   - component: {fileID: 7320928298684020658}
   - component: {fileID: 4818602260720115418}
+  - component: {fileID: 4159108538415216699}
   m_Layer: 0
   m_Name: Skeleton2
   m_TagString: Untagged
@@ -1660,6 +1661,20 @@ MonoBehaviour:
   - {fileID: 0}
   enemySpeed: 5
   enemyRotationSpeed: 5
+--- !u!136 &4159108538415216699
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320928298693494160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32068172
+  m_Height: 1.7065372
+  m_Direction: 1
+  m_Center: {x: -0.005852538, y: 0.9350344, z: 5.676322e-11}
 --- !u!1 &7320928298693494162
 GameObject:
   m_ObjectHideFlags: 0

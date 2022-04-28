@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform[] waypoints;
     [SerializeField] float enemySpeed = 5f;
     [SerializeField] float enemyRotationSpeed = 5f;
+    [SerializeField] int enemyHP = 3;
     private float minimunDistance = 1f;
     private int currentWaypoint;
     private bool goback = false;
@@ -51,5 +52,16 @@ public class EnemyAI : MonoBehaviour
             else currentWaypoint++;
         }
 
+    }
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.CompareTag("FireBall")){
+
+            
+            Destroy(other.gameObject);
+            enemyHP --;
+            if(enemyHP < 1 ){
+                Destroy(gameObject);
+            }
+        }
     }
 }

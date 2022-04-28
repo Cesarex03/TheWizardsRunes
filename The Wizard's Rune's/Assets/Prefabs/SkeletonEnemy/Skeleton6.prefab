@@ -1348,6 +1348,7 @@ GameObject:
   - component: {fileID: 6503734396899503110}
   - component: {fileID: 6503734396891808324}
   - component: {fileID: 9009402400176237356}
+  - component: {fileID: 2201517197589605662}
   m_Layer: 0
   m_Name: Skeleton6
   m_TagString: Untagged
@@ -1409,6 +1410,20 @@ MonoBehaviour:
   waypoints: []
   enemySpeed: 5
   enemyRotationSpeed: 5
+--- !u!136 &2201517197589605662
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6503734396899078246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32068172
+  m_Height: 1.7065372
+  m_Direction: 1
+  m_Center: {x: -0.005852538, y: 0.9350344, z: 5.676322e-11}
 --- !u!1 &6503734396899078248
 GameObject:
   m_ObjectHideFlags: 0

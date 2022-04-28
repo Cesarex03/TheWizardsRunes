@@ -358,8 +358,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33808516}
-  m_LocalRotation: {x: -0.13178316, y: 0.86588234, z: -0.30537573, w: -0.37366664}
-  m_LocalPosition: {x: 52.270824, y: 21.202091, z: 12.774418}
+  m_LocalRotation: {x: -0.13178314, y: 0.86588234, z: -0.30537567, w: -0.37366667}
+  m_LocalPosition: {x: 51.990826, y: 21.202091, z: 13.3844185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1362024676}
@@ -5541,7 +5541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712035592}
   m_LocalRotation: {x: -0, y: -0.7082542, z: -0, w: 0.7059575}
-  m_LocalPosition: {x: 46.17, y: 1.11, z: 3.46}
+  m_LocalPosition: {x: 45.89, y: 1.11, z: 4.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1296961594}
@@ -6860,8 +6860,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.13178316, y: 0.86588234, z: -0.30537573, w: -0.37366664}
-  m_LocalPosition: {x: 52.270824, y: 21.202091, z: 12.774418}
+  m_LocalRotation: {x: -0.13178314, y: 0.86588234, z: -0.30537567, w: -0.37366667}
+  m_LocalPosition: {x: 51.990826, y: 21.202091, z: 13.3844185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1161538351}
@@ -14549,6 +14549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1981939186}
   - component: {fileID: 1981939187}
+  - component: {fileID: 1981939188}
   m_Layer: 0
   m_Name: Golem
   m_TagString: Untagged
@@ -14587,6 +14588,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1981939188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981939185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f947eab89b8941940804b00d570f37e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHP: 5
+  bossAnim: {fileID: 0}
 --- !u!1 &1992574242
 GameObject:
   m_ObjectHideFlags: 0

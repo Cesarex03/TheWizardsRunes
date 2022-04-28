@@ -3121,6 +3121,7 @@ GameObject:
   - component: {fileID: 4657202669654958491}
   - component: {fileID: 4657202669647957977}
   - component: {fileID: 7487095160185661105}
+  - component: {fileID: 4212013224090418803}
   m_Layer: 0
   m_Name: Skeleton4
   m_TagString: Untagged
@@ -3182,6 +3183,20 @@ MonoBehaviour:
   waypoints: []
   enemySpeed: 5
   enemyRotationSpeed: 5
+--- !u!136 &4212013224090418803
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657202669655391739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32068172
+  m_Height: 1.7065372
+  m_Direction: 1
+  m_Center: {x: -0.005852538, y: 0.9350344, z: 5.676322e-11}
 --- !u!1 &4657202669655391741
 GameObject:
   m_ObjectHideFlags: 0
